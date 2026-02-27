@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style> /*Inicio del docuemnto en css*/
+form { /*aplicados al formulario*/
+  border-radius: 5px;/*Bordes redondos*/
+  background-color: #f2f2f2;/*color del fondo*/
+  padding: 20px;/*espacios internos*/
+}
+
+label {display: block;} /*Hace que las etiquetas se acomoden una debajo de otra*/
+
+input[type=text], select { /*Estilo del boton */
+  width: 100%;/* El boton que ocupa todo el ancho */
+  padding: 12px;/*espacio interno */
+  margin: 8px 0; /*separacion vertical */
+  display: inline-block;/*Permite tamaño personalizado*/
+  border: 1px solid #ccc; /*Modificar el borde y color  */
+  border-radius: 4px;/*Borde de las esquinas  */
+  box-sizing: border-box;/* Incluye padding dentro del ancho total */
+}
+
+input[type=submit] {/* Estilo del botón enviar */
+  width: 100%;/* Botón ocupa todo el ancho */
+  background-color: red;/* Color rojo */
+  color: white;/*Texto en blanco */
+  padding: 14px;/*Espacio interno */
+  margin: 8px 0;/*Separacion vertical */
+  border: none;/* sin bordes */
+  border-radius: 4px;/*Bordes redondos */
+  cursor: pointer;/*cambia el cursor al cambiar el maus */
+}
+
+input[type=submit]:hover { /*Cuando pasa el maus sobre el boton */
+  background-color: #45a049; /*Cambia a color verde */
+}
+</style> /*finalizacion de el css */
+<body>
+
+<h2>Style an HTML Form with CSS</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+  <label for="country">Country</label>
+  <select id="country" name="country">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+  
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
