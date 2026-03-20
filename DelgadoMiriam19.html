@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salidas en JavaScript</title>
+</head>
+<body>
+
+<h2>Ejemplos de salidas en JavaScript</h2>
+
+<p id="demo"></p>
+
+<script>
+// Datos personales
+let nombre = "Miriam Iveth Delgado Galaviz";
+
+// 1. innerHTML (mostrar en la página)
+document.getElementById("demo").innerHTML = "Nombre: " + nombre;
+
+// 2. document.write (escribe directamente en el HTML)
+document.write("<br>Nombre con document.write: " + nombre);
+
+// 3. alert (mensaje emergente)
+alert("Nombre con alert: " + nombre);
+
+// 4. console.log (consola del navegador)
+console.log("Nombre con console.log: " + nombre);
+</script>
+
+</body>
+</html>
