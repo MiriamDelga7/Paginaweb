@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Practica imc</title>
+</head>
+<body>
+
+<h1>Practica imc Miriam Delgado</h1>
+
+<input type="text" id="peso" placeholder="peso">
+<input type="text" id="altura" placeholder="altura">
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcular(){
+var peso = Number(document.getElementById("peso").value);
+var altura = Number(document.getElementById("altura").value);
+
+var imc = peso / (altura * altura);
+var grado = "";
+
+if(imc < 18.5){
+grado = "bajo peso";
+}else if(imc < 25){
+grado = "normal";
+}else if(imc < 30){
+grado = "sobrepeso";
+}else{
+grado = "obesidad";
+}
+
+document.getElementById("resultado").innerHTML = "imc: " + imc + "<br>grado: " + grado;
+}
+</script>
+
+</body>
+</html>

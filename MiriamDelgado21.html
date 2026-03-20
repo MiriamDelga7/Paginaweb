@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Practica 21 Miriam Delgado</title>
+</head>
+<body>
+
+<h1>Practica 21 Miriam Delgado</h1>
+
+<input type="text" id="num1">
+<input type="text" id="num2">
+
+<button onclick="suma()">Suma</button>
+<button onclick="resta()">Resta</button>
+<button onclick="division()">Division</button>
+<button onclick="exponente()">Exponente</button>
+
+<p id="resultado"></p>
+
+<script>
+function suma(){
+var n1 = Number(document.getElementById("num1").value);
+var n2 = Number(document.getElementById("num2").value);
+document.getElementById("resultado").innerHTML = n1 + n2;
+}
+
+function resta(){
+var n1 = Number(document.getElementById("num1").value);
+var n2 = Number(document.getElementById("num2").value);
+document.getElementById("resultado").innerHTML = n1 - n2;
+}
+
+function division(){
+var n1 = Number(document.getElementById("num1").value);
+var n2 = Number(document.getElementById("num2").value);
+document.getElementById("resultado").innerHTML = n1 / n2;
+}
+
+function exponente(){
+var n1 = Number(document.getElementById("num1").value);
+var n2 = Number(document.getElementById("num2").value);
+document.getElementById("resultado").innerHTML = n1 ** n2;
+}
+</script>
+
+</body>
+</html>
