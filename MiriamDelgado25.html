@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Miriam Delgado 25 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .tabla {
+      border: 1px solid black;
+      margin: 10px;
+      padding: 10px;
+      width: 150px;
+    }
+
+    .tabla h3 {
+      margin: 0 0 8px 0;
+    }
+
+    .tabla p {
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tablas de Multiplicar</h1>
+  <button onclick="generarTablas()">Generar tablas de multiplicar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function generarTablas() {
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "";
+
+      for (var i = 1; i <= 10; i++) {
+        var tabla = document.createElement("div");
+        tabla.className = "tabla";
+
+        var titulo = document.createElement("h3");
+        titulo.innerHTML = "Tabla del " + i;
+        tabla.appendChild(titulo);
+
+        for (var j = 1; j <= 10; j++) {
+          var linea = document.createElement("p");
+          linea.innerHTML = i + " x " + j + " = " + (i * j);
+          tabla.appendChild(linea);
+        }
+
+        resultado.appendChild(tabla);
+      }
+    }
+  </script>
+
+</body>
+</html>
